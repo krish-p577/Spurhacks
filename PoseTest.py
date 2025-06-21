@@ -6,14 +6,13 @@ import time
 cap = cv2.VideoCapture(0)
 ptime = 0
 
-mpPose = mp.solutions.pose
-pose = mpPose.Pose()
 mpdraw = mp.solutions.drawing_utils
 yeah = mp.solutions.face_mesh
 faceMesh = yeah.FaceMesh(max_num_faces=2)
 drawSpec = mpdraw.DrawingSpec(thickness=1, circle_radius=2)
 
-
+mpPose = mp.solutions.pose
+pose = mpPose.Pose()
 
 while True:
     success, img = cap.read()
@@ -22,7 +21,7 @@ while True:
     if results.multi_face_landmarks:
         for facelms in results.multi_face_landmarks:
             mpdraw.draw_landmarks(
-                img, facelms, yeah.FACEMESH_CONTOURS, drawSpec, mpPose)
+                img, facelms, yeah.FACEMESH_CONTOURS, drawSpec, pose, mpPose)
             for id, im in enumerate(facelms.landmark):
                 ih, iw, ic = img.shape
     ctime = time.time()
