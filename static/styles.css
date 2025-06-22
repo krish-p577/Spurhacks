@@ -62,21 +62,26 @@ body.dark .sidebar {
 /* ───────── Main Layout ───────── */
 .main {
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  position: relative;
+  display: block; /* Not flex! Important for scrolling */
 }
+
 .page {
   display: none;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   max-width: 720px;
-  padding: 2rem;
+  margin: 0 auto; /* Horizontally center */
+  padding: 4rem 2rem 6rem;
+  box-sizing: border-box;
+  min-height: 100vh;
 }
 .page.active {
-  display: flex;
+  display: block;
 }
+
 
 /* ───────── Upload Box ───────── */
 .upload-box {
