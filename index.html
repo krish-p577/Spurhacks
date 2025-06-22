@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>CornerCoach</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <ul>
+      <li class="nav-item active" data-page="home"><span class="icon">🏠</span><span class="label">Home</span></li>
+      <li class="nav-item" data-page="stats"><span class="icon">📊</span><span class="label">Stats</span></li>
+      <li class="nav-item" data-page="videos"><span class="icon">🎬</span><span class="label">Videos</span></li>
+      <li class="nav-item" data-page="credentials"><span class="icon">👥</span><span class="label">Credentials</span></li>
+      <li class="nav-item" data-page="settings"><span class="icon">⚙️</span><span class="label">Settings</span></li>
+    </ul>
+  </nav>
+
+  <main class="main">
+    <!-- HOME -->
+    <section id="home" class="page active">
+      <div class="upload-box">
+        <button id="analyzeBtn" class="analyze-btn">Analyze Video</button>
+        <input id="videoInput" type="file" accept="video/*" multiple hidden />
+        <div id="homeList" class="video-list">
+          <p id="placeholder" class="placeholder">No videos yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="page">
+      <h2>Stats (coming soon)</h2>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="videos" class="page">
+      <h2>Your Videos</h2>
+      <div id="videosList" class="video-list"></div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section id="credentials" class="page">
+      <h2>Credentials</h2>
+      <ul class="cred-list">
+        <li>Jane Doe — ML Engineer</li>
+        <li>John Smith — Front‑end Dev</li>
+        <li>Alex Lee — UX Designer</li>
+      </ul>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="settings" class="page">
+      <h2>Settings</h2>
+      <label class="toggle">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+        <span class="toggle-label">Dark Mode</span>
+      </label>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
