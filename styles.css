@@ -30,3 +30,25 @@ body.dark .sidebar{border-color:#334155}
 .slider:before{content:"";position:absolute;height:22px;width:22px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.4s}
 input:checked + .slider{background:var(--blue-600)}
 input:checked + .slider:before{transform:translateX(24px)}
+.cred-list {
+  list-style: none;
+  padding: 0;
+}
+.cred-list li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ln-btn {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--blue-700);
+  border-radius: 6px;
+  text-decoration: none;
+}
+.ln-btn:hover {
+  background: var(--blue-600);
+}
