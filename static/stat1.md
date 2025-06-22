@@ -397,4 +397,79 @@ Based on the hand-to-shoulder and hand-to-face distances:
 
 1.  **Maintain a Tighter Guard with the Non-Punching Hand:** While the punching hand extends well, there are instances where the non-punching hand slightly increases its distance from the face (e.g., `LH-Face` during some right-hand crosses). A consistent, tight guard with the non-punching hand is crucial for defense and quick counter-punching. Focus on keeping the inactive hand glued to the face.
 2.  **Ensure Full, Explosive Extension on Crosses:** The right crosses show excellent extension (`RH–RS` values are high), which is great for power. Continue to focus on driving through the punch and achieving maximum reach, but always in conjunction with body rotation to generate power, rather than just arm extension. The relatively lower `RH-Face` distance at peak compared to `RH-RS` suggests good hip and shoulder rotation is likely contributing to the punch, which is positive.
-3.  **Optimize Recovery Speed:** The recovery times are generally good (e.g., 5-7 frames or ~0.16-0.23 seconds). Continuously work on snapping the hand back to the guard position as quickly as possible after each punch. A faster recovery minimizes the window for counter-attacks.
+3.  **Optimize Recovery Speed:** The recovery times are generally good (e.g., 5-7 frames or ~0.16-0.23 seconds). Continuously work on snapping the hand back to the guard position as quickly as possible after each punch. A faster recovery minimizes the window for counter-attacks.## Boxing Performance Analysis: Shadowboxing Video (30 FPS)
+
+**Data Interpretation Basis:**
+*   **LH–LS / RH–RS (Hand to Shoulder Distance):** A larger value indicates the arm is *more extended* from the shoulder (i.e., punching). A smaller value indicates the arm is *more retracted* (i.e., in guard).
+*   **LH–Face / RH–Face (Hand to Face Distance):** A larger value indicates the hand is *further away* from the face (i.e., extended in a jab/cross). A smaller value indicates the hand is *closer* to the face (i.e., in guard).
+*   **Punch Detection:** A punch is identified by a significant increase in Hand-Shoulder distance and Hand-Face distance (for straight punches) followed by retraction (decrease in both). For hooks, Hand-Shoulder distance will increase, but Hand-Face distance might not increase as dramatically, or might follow a different profile as the hand sweeps around. The non-punching hand's Hand-Face distance should ideally decrease or stay low, indicating a good guard.
+
+---
+
+### Analysis of Punches
+
+Based on the data, here's a breakdown of the punches observed:
+
+**Total Left Punches: 2**
+**Total Right Punches: 5**
+
+**Punch Details:**
+
+1.  **Right Straight/Cross (Frames 38-50)**
+    *   **RH–RS:** Increases from 58.52 (F38) to a peak of **166.20** (F47), then retracts.
+    *   **RH–Face:** Increases from 43.86 (F38) to a peak of **98.84** (F47), then retracts.
+    *   **Non-punching hand (Left):** LH–Face decreases from 87.23 (F38) to 40.22 (F54), indicating a good return to guard.
+    *   **Type:** The significant increase in RH-Face indicates a **Right Straight/Cross**.
+
+2.  **Left Hook (Frames 62-67)**
+    *   **LH–LS:** Increases from 11.66 (F62) to a peak of **13.41** (F68). *Note: The arm appears to start in an already somewhat extended position.*
+    *   **LH–Face:** Shows a slight increase from 55.71 (F62) to **50.77** (F65) then **43.86** (F67). This is still a small change relative to a straight punch's facial extension. The arm is clearly extending from the shoulder (increase in LH-LS), but the hand isn't moving far *away* from the face, consistent with a circular, **Left Hook** motion where the hand sweeps around.
+    *   **Non-punching hand (Right):** RH–Face decreases from 52.20 (F62) to 39.05 (F66), showing good guard.
+
+3.  **Left Jab/Straight (Frames 78-90)**
+    *   **LH–LS:** Increases dramatically from 14.31 (F78) to a peak of **147.13** (F86), then retracts.
+    *   **LH–Face:** Increases dramatically from 69.63 (F78) to a peak of **161.62** (F86), then retracts.
+    *   **Non-punching hand (Right):** RH–Face decreases from 42.72 (F78) to 33.73 (F85/86), showing excellent guard maintenance.
+    *   **Type:** The massive increase in both LH-LS and LH-Face clearly indicates a **Left Jab/Straight**.
+
+4.  **Right Straight/Cross (Frames 112-120)**
+    *   **RH–RS:** Increases from 84.48 (F112) to a peak of **174.94** (F117), then retracts.
+    *   **RH–Face:** Increases from 39.81 (F112) to a peak of **106.79** (F117), then retracts.
+    *   **Non-punching hand (Left):** LH–Face decreases from 67.26 (F112) to 60.37 (F119), showing good guard.
+    *   **Type:** The significant extension of RH-Face suggests a **Right Straight/Cross**.
+
+5.  **Left Hook (short) followed by Right Cross Combination (Frames 128-140)**
+    *   **Left Hand (initial punch):**
+        *   LH–LS: Increases from 7.0 (F128) to 22.84 (F139).
+        *   LH–Face: Increases from 55.47 (F128) to 62.16 (F138).
+        *   This is a very short extension for the left hand, and the hand-to-face distance change is minimal, characteristic of a **Left Hook**.
+    *   **Right Hand (follow-up punch):**
+        *   RH–RS: Increases from 36.87 (F129) to a peak of **130.11** (F138).
+        *   RH–Face: Increases from 48.30 (F129) to a peak of **149.25** (F135).
+        *   **Type:** This is a clear **Right Straight/Cross** thrown immediately after the short left hook.
+
+6.  **Right Straight/Cross (Frames 162-172)**
+    *   **RH–RS:** Increases from 83.60 (F162) to a peak of **161.01** (F169), then retracts.
+    *   **RH–Face:** Increases from 44.14 (F162) to a peak of **100.46** (F168), then retracts.
+    *   **Non-punching hand (Left):** LH–Face decreases from 81.60 (F162) to 47.43 (F167), showing good guard.
+    *   **Type:** The significant extension of RH-Face indicates a **Right Straight/Cross**.
+
+7.  **Right Straight/Cross (Frames 190-200)**
+    *   **RH–RS:** Increases from 81.74 (F190) to a peak of **179.01** (F197), then retracts.
+    *   **RH–Face:** Increases from 43.73 (F190) to a peak of **112.78** (F197), then retracts.
+    *   **Non-punching hand (Left):** LH–Face decreases from 70.09 (F190) to 44.72 (F200), showing good guard.
+    *   **Type:** The significant extension of RH-Face indicates a **Right Straight/Cross**.
+
+---
+
+### Stance or Balance Issues
+
+The `Knees` and `Toes` data are consistently `None` for all frames. Therefore, it is **not possible to analyze** stance or balance issues based on the provided data.
+
+---
+
+### Coaching Tips for Improving Form
+
+1.  **Vary Punch Selection and Volume:** The analysis shows a strong reliance on the right hand (5 out of 7 punches). Encourage the fighter to increase the volume and variety of left-hand punches, particularly the jab. A strong, consistent jab can control distance, set up combinations, and create openings.
+2.  **Ensure Consistent Guard for Non-Punching Hand:** While generally good, there were instances where the non-punching hand's guard (Hand-Face distance) was not as tight or quick to return. Emphasize the importance of "bringing the non-punching hand home" to protect the face immediately after a punch, turning the body and hips, and ensuring the guard is impenetrable at all times.
+3.  **Maximize Hook Extension and Power:** The left hook observed (F62-67, and F128-138) showed less Hand-Shoulder and Hand-Face extension compared to the straight punches. Focus on driving through the hips and shoulders to generate maximum power and a fuller, more impactful arc for hooks, ensuring proper rotation and follow-through.
