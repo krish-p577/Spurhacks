@@ -1,3 +1,4 @@
+<!-- ===================== index.html ===================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,22 +6,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>CornerCoach</title>
   <link rel="stylesheet" href="styles.css" />
+
+  
 </head>
+
 <body>
-  <!-- Sidebar -->
+  <!-- ───────── Sidebar ───────── -->
   <nav class="sidebar">
     <ul>
       <li class="nav-item active" data-page="home"><span class="icon">🏠</span><span class="label">Home</span></li>
       <li class="nav-item" data-page="stats"><span class="icon">📊</span><span class="label">Stats</span></li>
       <li class="nav-item" data-page="videos"><span class="icon">🎬</span><span class="label">Videos</span></li>
-      <li class="nav-item" data-page="credentials"><span class="icon">👥</span><span class="label">Credentials</span></li>
       <li class="nav-item" data-page="settings"><span class="icon">⚙️</span><span class="label">Settings</span></li>
     </ul>
   </nav>
 
   <main class="main">
-    <!-- HOME -->
+    <!-- ───────── HOME ───────── -->
     <section id="home" class="page active">
+      <img src="sperlogo.png" alt="CornerCoach Logo" class="logo" />
       <div class="upload-box">
         <button id="analyzeBtn" class="analyze-btn">Analyze Video</button>
         <input id="videoInput" type="file" accept="video/*" multiple hidden />
@@ -30,52 +34,59 @@
       </div>
     </section>
 
-    <!-- STATS -->
+    <!-- ───────── STATS ───────── -->
     <section id="stats" class="page">
-      <h2>Stats (coming soon)</h2>
+      <h2>Stats</h2>
+      <!-- Markdown rendered here -->
+      <div id="markdown-container" data-file="stat1.md"></div>
     </section>
 
-    <!-- VIDEOS -->
+    <!-- ───────── VIDEOS ───────── -->
     <section id="videos" class="page">
       <h2>Your Videos</h2>
       <div id="videosList" class="video-list"></div>
     </section>
-    
-<!-- CREDENTIALS -->
-<section id="credentials" class="page">
-  <h2>Credentials</h2>
 
-  <ul class="cred-list">
-    <li>
-      Krish Patel
-      <a class="ln-btn" href="https://www.linkedin.com/in/krish-patel577/" target="_blank">LinkedIn</a>
-    </li>
-    <li>
-      Samarth Bhatia
-      <a class="ln-btn" href="https://www.linkedin.com/in/samarth-bhatia-15sb/ target="_blank">LinkedIn</a>
-    </li>
-    <li>
-      Jaspreet Kundi
-      <a class="ln-btn" href="https://www.linkedin.com/in/jaspreet-kundi" target="_blank">LinkedIn</a>
-    </li>
-    <li>
-      Krrish Kumar Railwani
-      <a class="ln-btn" href="https://www.linkedin.com/in/krrish-railwani" target="_blank">LinkedIn</a>
-    </li>
-  </ul>
-</section>
-
-    <!-- SETTINGS -->
+    <!-- ───────── SETTINGS ───────── -->
     <section id="settings" class="page">
       <h2>Settings</h2>
+
+      <!-- Theme toggle -->
       <label class="toggle">
-        <input type="checkbox" id="themeToggle">
+        <input type="checkbox" id="themeToggle" />
         <span class="slider"></span>
         <span class="toggle-label">Dark Mode</span>
       </label>
+
+      <!-- Preferences -->
+      <div class="settings-group">
+        <h3>Preferences</h3>
+        <label><input type="checkbox" id="autoPlayToggle" /> Autoplay Videos</label>
+      </div>
     </section>
   </main>
 
+  <!-- Marked.js for MD → HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    /* Render the markdown file specified in data-file attribute */
+    const mdContainer = document.getElementById('markdown-container');
+    const mdFile = mdContainer.dataset.file || 'stat1.md'; // default fallback
+
+    fetch(mdFile)
+      .then(res => res.text())
+      .then(md => {
+        mdContainer.innerHTML = marked.parse(md);
+        // If filename looks like stat1.md → update heading to "Stat 1"
+        const match = mdFile.match(/stat(\d+)/i);
+        if (match) {
+          document.querySelector('#stats h2').textContent = `Stat ${match[1]}`;
+        }
+      })
+      .catch(err => mdContainer.textContent = `Error loading ${mdFile}: ${err}`);
+  </script>
+
+  <!-- App logic -->
   <script src="app.js"></script>
 </body>
 </html>
