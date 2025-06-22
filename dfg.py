@@ -3,9 +3,12 @@ import mediapipe as mp
 import numpy as np
 import math
 from pymongo import MongoClient
+import google.generativeai as genai
 
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
+
+
 
 # Utility: Euclidean distance
 def euclidean_distance(p1, p2):
@@ -138,7 +141,7 @@ def track_custom_points_from_video(video_path):
 
     cap.release()
     cv2.destroyAllWindows()
-
 # Run on selected video
-#track_custom_points_from_video("video4.mp4")
+if __name__ == '__main__':
+    track_custom_points_from_video("video4.mp4")
 
