@@ -58,9 +58,9 @@ def gemini_analysis():
         print(response.text)
 
 
-        file = open('static\stat1.md', 'a')
+        file = open('static\stat1.md', 'w')
         file.write(response.text)
-
+        file.close
         return response
 
     except Exception as e:
