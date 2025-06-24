@@ -39,19 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
   let db, clips = [];                                                     // 37
 
   /* page-switcher */                                                     // 39
-  nav.forEach(n =>
+ nav.forEach(n =>
   n.addEventListener('click', () => {
     nav.forEach(i => i.classList.toggle('active', i === n));
     pages.forEach(p => {
-      const isActive = p.id === n.dataset.page;
-      p.classList.toggle('active', isActive);
-      if (isActive) {
-        p.scrollTop = 0;                 // resets scroll of section
-        window.scrollTo({ top: 0 });     // ensures whole page scrolls to top
+      const active = p.id === n.dataset.page;
+      p.classList.toggle('active', active);
+      if (active) {
+        p.scrollTop = 0;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     });
   })
 );
+
 
 
   /* theme toggle */                                                      // 46

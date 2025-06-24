@@ -44,7 +44,7 @@ def gemini_analysis():
     3. Stance or balance issues from toe/knee data.
     4. 2–3 coaching tips on improving form.
 
-    Provide the response in the markdown file format
+    Provide the response in the markdown file format without emojies, make it structuered and informative and interesting to read
 
     Data:
     {frame_data_str}
